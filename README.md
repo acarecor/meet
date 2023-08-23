@@ -4,6 +4,10 @@
 
 To build a serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique. The application uses the Google Calendar API to fetch upcoming events.
 
+## How Meet App uses serverless functions 
+Meet App uses serverless functions to interact with an external API: Google Calendar. In the app, the user can request information about upcoming events and filter them by city, as well as view a chart. All these requests are handled through serverless functions that interact with the API to display the required information, making it a progressive web application, which results in it loading instantly, being scalable, always available, no cost for idle time.
+
+
 ## Key Features of Meet-App
 
 ### Feature 1: Filter Events By City 
