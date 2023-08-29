@@ -1364,6 +1364,6 @@ const mockData = [
      },
      "eventType": "default"
     }
-   ];
+];
   
-  export default mockData;
+export default mockData;
