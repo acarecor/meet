@@ -1,9 +1,14 @@
 import React from "react";
 
-const Event = () => {
+const Event = ({ event }) => {
     return (
-        <li></li>
+        <li >
+            <div role="listbox" className="event">
+                <h1>{event.summary}</h1>
+                <p>{event.created}</p>
+            </div>
+        </li>
     );
 }
 
-export default Event;
+export default Event; 
