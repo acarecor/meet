@@ -16,6 +16,12 @@ const CitySearch = ({ allLocations }) => {
         setSuggestions(filteredLocations);
     };
 
+    const handleItemClicked = (event) => {
+        const value = event.target.textContent;
+        setQuery(value);
+        setShowSuggestions(false); //to hide the list
+    };
+
     return (
       <div id="city-search">
         <input 
@@ -29,9 +35,11 @@ const CitySearch = ({ allLocations }) => {
         {showSuggestions? 
             <ul className="suggestions">
                 {suggestions.map((suggestions) => {
-                    return<li key={suggestions}>{suggestions}</li>
+                    return<li 
+                        onClick={handleItemClicked} 
+                        key={suggestions}>{suggestions}</li>
                 })}
-                <li key='See all cities'>
+                <li key='See all cities' onClick={handleItemClicked}>
                     <b>See all cities</b>
                 </li>
             </ul>: null}
