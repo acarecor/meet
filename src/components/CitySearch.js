@@ -44,7 +44,8 @@ const CitySearch = ({ allLocations }) => {
                 </li>
             </ul>: null}
       </div>
-    )
-   }
+    );
+   };
    
    export default CitySearch;
+
