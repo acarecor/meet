@@ -2,10 +2,6 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import  userEvent  from '@testing-library/user-event';
 import NumberOfEvents from '../components/NumberOfEvents';
-import mockData from '../mock-data';
-
-
-const event = mockData;
 
 describe('<NumberOfEvents /> component', () => {
   let NumberOfEventsComponent;
@@ -31,6 +27,7 @@ describe('<NumberOfEvents /> component', () => {
   });
 
 });
+
 
 
 
