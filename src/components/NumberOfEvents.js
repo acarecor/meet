@@ -15,11 +15,11 @@ const NumberOfEvents = () => {
 
   return (
     <div id="number-of-events">
-      <input 
+      NumberOfEvents: <input 
         type="text" 
         value={query} 
         onChange={handleInputChanged}
-        />
+        /> 
     </div>
   );
 };
