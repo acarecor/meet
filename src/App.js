@@ -17,7 +17,7 @@ const App = () => {
   useEffect(() => {
     fetchData();
     // eslint-disable-next-line
-   }, [currentCity]);
+   }, [currentCity, currentNOE]);
 
   const fetchData = async () => {
     const allEvents = await getEvents();
@@ -33,7 +33,8 @@ const App = () => {
       <CitySearch 
         allLocations={allLocations} 
         setCurrentCity={setCurrentCity}/>
-      <NumberOfEvents />
+      <NumberOfEvents 
+        setCurrentNOE={setCurrentNOE}/>
       <EventList events={events} />
     </div>
   );

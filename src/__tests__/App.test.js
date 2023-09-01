@@ -4,7 +4,6 @@ import { getEvents } from '../api';
 import  userEvent  from '@testing-library/user-event';
 import App from "../App";
 
-
 describe('<App /> component', () => {
   let AppDOM;
   beforeEach(() => {
@@ -49,4 +48,7 @@ describe('<App /> integration', ()=> {
     });
 
   });
+
+
+  
 });
