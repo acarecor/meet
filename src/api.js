@@ -14,23 +14,6 @@ const checkToken = async (accessToken) => {
   const result = await response.json();
   return result;
 };
-//this function will fetch the list of all events
-export const getEvents = async () => {
-  if(window.location.href.startsWith('http//localhost'))
-  { 
-    return mockData;
-  }
-  const token = await getAccessToken();
-  if(token) {
-    removeQuery();
-    const url = " https://bh7b7lw10h.execute-api.eu-central-1.amazonaws.com/dev/api/get-events" + "/" + token;
-    const response = await fetch(url);
-    const result = await response.json();
-    if (result){
-        return result.events;
-    } else return null;
-  }
-};
 
 const removeQuery = () => {
     let newurl;
@@ -51,10 +34,30 @@ const getToken = async (code) => {
     const encodeCode = encodeURIComponent(code);
     const response = await fetch (
         "https://bh7b7lw10h.execute-api.eu-central-1.amazonaws.com/dev/api/token" + "/" + encodeCode );
-    const { accessToken } = await response.json();
-    accessToken && localStorage.setItem("access_token", access_token);
+    const { access_token } = await response.json();
+    access_token && localStorage.setItem("access_token", access_token);
     return access_token;
 };
+
+//this function will fetch the list of all events
+export const getEvents = async () => {
+  if(window.location.href.startsWith('http//localhost'))
+  { 
+    return mockData;
+  }
+  const token = await getAccessToken();
+  if(token) {
+    removeQuery();
+    const url = " https://bh7b7lw10h.execute-api.eu-central-1.amazonaws.com/dev/api/get-events" + "/" + token;
+    const response = await fetch(url);
+    const result = await response.json();
+    if (result){
+        return result.events;
+    } else return null;
+  }
+};
+
+
 
 export const getAccessToken = async () => {
   const accessToken = localStorage.getItem("access_token");
