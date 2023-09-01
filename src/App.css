@@ -1,10 +1,109 @@
 .App {
   text-align: center;
+  padding: 20px;
+}
+.App *{
+  box-sizing: border-box;
+}
+h1 {
+  color:  rgb(44, 103, 82);
+}
+ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#city-search {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+
+}
+.city, 
+.number-input {
+  width: 250px;
+  padding: 8px 6px 8px 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  line-height: 20px;
+  align-self: center;
+  height: 35px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.suggestions {
+  width: 250px;
+  position: absolute;
+  top: 50px;
+  height: 35px;
+  align-self: center;
+  margin: 0;
+  font-size: 14px;
+  padding: 0;
+  
+
+}
+.suggestions > li {
+  width: 250px;
+  text-align: left;
+  padding: 10px 6px 10px 10px;
+  background-color: #eee;
+  cursor: default;
+}
+
+.suggestions > li:last-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.suggestions > li:hover {
+  background-color: rgb(111, 207, 173);
+}
+
+.event{
+  border: 1px solid #ccc;
+ background-color: rgba(140, 181, 225, 0.708);
+ margin: 10px;
+ padding: 20px;
+ position: relative;
+}
+#event-list{
+  list-style: none;
+  margin: 0;
+  padding: 10px 10px 35px;
+  border-radius: 5px;
+  text-align: left;
+  border-color: black;
+}
+p {
+  text-justify: auto;
+  
+}
+.number-input {
+  width: 100px;
+}
+button {
+  text-align: right;
+  cursor: pointer;
+  position: absolute;
+  display: inline-block;
+  right: 20px;
+  padding: 8px 6px 8px 10px;
+  font-size: 15px;
+  bottom: 10px;
+  background-color: rgb(111, 207, 173);
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #cbc5c5;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,26 +112,7 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+

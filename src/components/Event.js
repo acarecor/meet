@@ -12,16 +12,16 @@ const Event = ({ event }) => {
         <li >
             <div role="listbox" className="event">
                 <h3>{event.summary}</h3>
-                <p>{event.created}</p>
                 <p>{event.location}</p>
+                <p>{event.created}</p>
                 
+                {showDetails ? (
+                    <p className="details">{event.description}</p>
+                ): null }
                 <button
                  onClick={toggleButton}>
                 {showDetails ? 'hide details' : 'show details' }
                 </button>
-                {showDetails ? (
-                    <p className="details">{event.description}</p>
-                ): null }
             </div>
         </li>
     );
