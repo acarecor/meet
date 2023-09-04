@@ -81,9 +81,9 @@ describe ('<CitySearch /> Integration', () => {
     test ('renders suggestion list when app is rendered', async () => {
         const user = userEvent.setup();
         const AppComponent = render(<App />);
-        const AppDom = AppComponent.container.firstChild;
+        const AppDOM = AppComponent.container.firstChild;
 
-        const CitySearchDOM = AppDom.querySelector('#city-search');
+        const CitySearchDOM = AppDOM.querySelector('#city-search');
         const cityTextBox = within(CitySearchDOM).queryByRole('textbox');
         await user.click(cityTextBox);
 
