@@ -34,8 +34,8 @@ Scenario 3: User can select a city from the suggested list.
 As a user, I should be able to to show/hide event details so that I can see more/less information about an event. 
 
 Scenario 1: An event element is collapsed by default. 
-*	Given the user has selected a city, to know what events are nearby 
-*	When he has received a list of events as a reply, 
+*	Given the user has open the App, 
+*	When the user can see a list of events, 
 *	Then the details of each event are collapsed by default.
 
 Scenario 2: User can expand an event to see details. 
