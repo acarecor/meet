@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
+
 const Event = ({ event }) => {
     const [showDetails, setShowDetails] = useState(false); 
 
@@ -19,6 +20,7 @@ const Event = ({ event }) => {
                     <p className="details">{event.description}</p>
                 ): null }
                 <button
+                className="details-btn"
                  onClick={toggleButton}>
                 {showDetails ? 'hide details' : 'show details' }
                 </button>
