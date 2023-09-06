@@ -1,5 +1,6 @@
 //API calls will be handled here in the future.
 import mockData from "./mock-data";
+import NProgress from 'nprogress';
 
 export const extractLocations = (events) => {
   const extractedLocations = events.map((event) => event.location);
@@ -41,6 +42,7 @@ const getToken = async (code) => {
 
 //this function will fetch the list of all events
 export const getEvents = async () => {
+  NProgress.start();
   if(window.location.href.startsWith('http://localhost'))
   { 
     return mockData;
@@ -53,6 +55,7 @@ export const getEvents = async () => {
     const response = await fetch(url);
     const result = await response.json();
     if (result){
+      NProgress.done();
         return result.events;
     } else return null;
   }
