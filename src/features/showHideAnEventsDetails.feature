@@ -12,5 +12,5 @@ Feature: Show/Hide Event Details
 
  Scenario: User can collapse an event to hide details 
   Given the user displayed the event details whit more information 
-  When the user has seen all the information 
-  Then the user can collapse the event to hide the details
+  When the user clicks on the hide details button
+  Then the user can collapse the event and the details would be hidden
