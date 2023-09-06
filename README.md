@@ -45,8 +45,8 @@ Scenario 2: User can expand an event to see details.
 
 Scenario 3: User can collapse an event to hide details. 
 *	Given the user displayed the event details whit more information, 
-*	When the user has seen all the information 
-*	Then the user can collapse the event to hide the details.
+*	When the user clicks on the hide details button, 
+*	Then the user can collapse the event and the details would be hidden.
 
 ### Feature 3: Specify Number of Events
 As a user,  I should be able to specify the number of events I want to view in the app
@@ -54,11 +54,11 @@ so that I can see more or fewer events in the events list at once.
 
 Scenario 1: When user hasn’t specified a number, 32 events are shown by default. 
 *	Given the user didn't specify the number of events to be displayed, 
-*	When the user searches the events nearby,  
-*	Then the user will receive a default list of 32 events.
+*	When  the user receives the list of events,  
+*	Then by default the list will be 32 events.
 
 Scenario 2: User can change the number of events displayed. 
-*	Given that the user received a default list of 32 events,
+*	Given the user sees the default box number of events
 *	When the user wants to specify the number of events, he want to recibe. 
 *	Then the user can change the settings with the number of events to be displayed.
 
