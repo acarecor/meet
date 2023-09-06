@@ -30,14 +30,14 @@ describe('show/hide an event details', () => {
     //scenario 2
     test('User can expand an event to see details', async () =>{
         await page.click('.event .details-btn');
-        const eventDetails = await page.$('event .details');
+        const eventDetails = await page.$('.event .details');
         expect(eventDetails).toBeDefined();
     });
 
     //scenario 3
     test('User can collapse an event to hide details', async () =>{
         await page.click('.event .details-btn');
-        const eventDetails = await page.$('event .details');
+        const eventDetails = await page.$('.event .details');
         expect(eventDetails).toBeNull();
     });
 });
