@@ -18,6 +18,7 @@ defineFeature(feature, test => {
         when('the user receives the list of events', async () => {
             const AppDOM = AppComponent.container.firstChild;
             const EventListDOM = AppDOM.querySelector('#event-list');
+            expect(EventListDOM).toBeInTheDocument();
            
         });
 
@@ -38,6 +39,8 @@ defineFeature(feature, test => {
             AppComponent = render (<App />);
             const AppDOM = AppComponent.container.firstChild;
             const NumberOfEventsDOM = AppDOM.querySelector('#number-of-events');
+            expect(NumberOfEventsDOM).toBeInTheDocument();
+
         });
 
         when('the user wants to specify the number of events, he want to recibe', async () => {
