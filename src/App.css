@@ -74,6 +74,7 @@ ul {
  margin: 10px;
  padding: 20px;
  position: relative;
+ z-index: -1;
 }
 #event-list{
   list-style: none;
@@ -85,6 +86,7 @@ ul {
 }
 p {
   text-justify: auto;
+  padding: 8px;
   
 }
 .number-input {
