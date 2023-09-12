@@ -9,19 +9,19 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
     const handleInputChanged =(event) =>{
      const value = event.target.value;
 
-      let errorText;
+    let errorText;
       if(isNaN(value)) {
-          errorText = "The value is not a number";
+        errorText = "The value is not a number";
       }
       else if(value <= 0){
         errorText = "Please only type positive numbers";
       }
       else {
-        errorText= "";
+      errorText= "";
       }
       setErrorAlert(errorText);
       setCurrentNOE(value);
-      
+    
     };
 
 
