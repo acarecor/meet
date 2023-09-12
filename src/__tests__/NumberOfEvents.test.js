@@ -8,7 +8,7 @@ import App from '../App';
 describe('<NumberOfEvents /> component', () => {
   let NumberOfEventsComponent;
   beforeEach(() => {
-    NumberOfEventsComponent = render(<NumberOfEvents setCurrentNOE={() => {}} />);
+    NumberOfEventsComponent = render(<NumberOfEvents setCurrentNOE={() => {}}  setErrorAlert={() => {}}/>);
   });
 
   test('render textBox for the number of events', () => {
