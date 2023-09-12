@@ -1,24 +1,37 @@
 import React from "react";
-import { useState } from "react";
+
     
 
 
-const NumberOfEvents = ({ setCurrentNOE }) => {
-    const [query, setQuery] = useState(32);
-
+const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
+    
+    
     const handleInputChanged =(event) =>{
      const value = event.target.value;
-     setQuery(value);
-     setCurrentNOE(value); 
+
+    let errorText;
+      if(isNaN(value)) {
+        errorText = "The value is not a number";
+      }
+      else if(value <= 0){
+        errorText = "Please only type positive numbers";
+      }
+      else {
+      errorText= "";
+      }
+      setErrorAlert(errorText);
+      setCurrentNOE(value);
+    
     };
 
 
   return (
     <div id="number-of-events">
-      Number of Events: <input 
+      Number of Events: 
+      <input 
         className="number-input"
-        type="text" 
-        value={query} 
+        type="text"
+        defaultValue="32"
         onChange={handleInputChanged}
         /> 
     </div>
