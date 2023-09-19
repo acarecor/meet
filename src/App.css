@@ -84,9 +84,12 @@ ul {
   text-align: left;
   border-color: black;
 }
+#event-details{
+  padding: 5px 5px 25px 0px ;
+}
 p {
   text-justify: auto;
-  padding: 8px;
+  margin-bottom:25px; 
   
 }
 .number-input {
@@ -98,9 +101,10 @@ button {
   position: absolute;
   display: inline-block;
   right: 20px;
-  padding: 8px 6px 8px 10px;
+  padding: 10px 6px 8px 10px;
   font-size: 15px;
   bottom: 10px;
+
   background-color: rgb(111, 207, 173);
   border-radius: 5px;
   outline: none;
