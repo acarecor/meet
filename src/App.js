@@ -2,9 +2,11 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import CitySearch from './components/CitySearch';
 import EventList from './components/EventList';
+import CityEventsChart from './components/CityEventsChart';
 import NumberOfEvents from './components/NumberOfEvents';
 import { extractLocations, getEvents } from './api';
 import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
+
 
 import './App.css';
 
@@ -56,7 +58,10 @@ const App = () => {
         setCurrentNOE={setCurrentNOE}
         setErrorAlert={setErrorAlert}
         />
-      <EventList events={events} />
+      <CityEventsChart
+        allLocations={allLocations}
+        events={events}/>
+       <EventList events={events} />
     </div>
   );
 };
