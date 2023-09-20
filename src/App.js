@@ -48,6 +48,7 @@ const App = () => {
        {errorAlert.length ? <ErrorAlert text= {errorAlert}/> : null}
        {warningAlert.length ? <WarningAlert text= {warningAlert}/>: null}
       </div>
+      <div> Choose your nearest city</div>
       <CitySearch 
         allLocations={allLocations} 
         setCurrentCity={setCurrentCity}
