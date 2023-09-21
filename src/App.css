@@ -5,6 +5,12 @@
 .App *{
   box-sizing: border-box;
 }
+.App-header{
+  margin-bottom: 20px;
+  background-color: rgba(236, 239, 242, 0.79);
+  padding: 20px 0 20px 0 ;
+}
+
 h1 {
   color:  rgb(44, 103, 82);
 }
@@ -69,12 +75,15 @@ ul {
 }
 
 .event{
-  border: 1px solid #ccc;
- background-color: rgba(140, 181, 225, 0.708);
+ border-radius: 5px;
+ background-color: rgba(236, 239, 242, 0.79);
  margin: 10px;
  padding: 20px;
  position: relative;
  
+}
+.event-general{
+  padding-bottom: 10px;
 }
 #event-list{
   list-style: none;
@@ -83,17 +92,18 @@ ul {
   border-radius: 5px;
   text-align: left;
   border-color: black;
+  height: auto;
+
 }
 #event-details{
-  padding: 5px 5px 25px 0px ;
+  padding: 0 5px 25px 0px ;
 }
 p {
   text-justify: auto;
-  margin-bottom:25px; 
-  
 }
 .number-input {
   width: 100px;
+  margin-top: 10px;
 }
 button {
   text-align: right;
@@ -104,13 +114,13 @@ button {
   padding: 10px 6px 8px 10px;
   font-size: 15px;
   bottom: 10px;
-
   background-color: rgb(111, 207, 173);
   border-radius: 5px;
   outline: none;
   border: 1px solid #cbc5c5;
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  color: black;
 }
 .alerts-container {
   position: fixed;
@@ -122,12 +132,22 @@ button {
 .charts-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin: 20px;
+}
+.charts-container div{
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
+.logo {
+  width: 250px;
+  height: auto;
+}
 @media (max-width: 768px) {
   .charts-container{
     grid-template-columns: 1fr;
   }
+
 }  
 
 
