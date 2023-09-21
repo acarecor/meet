@@ -119,12 +119,16 @@ button {
   width: 250px;
   z-index: 1000;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.charts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
+
+@media (max-width: 768px) {
+  .charts-container{
+    grid-template-columns: 1fr;
+  }
+}  
 
 
 
