@@ -12,15 +12,20 @@ const Event = ({ event }) => {
     return (
         <li >
             <div role="listbox" className="event">
-                <h3>{event.summary}</h3>
-                <p>{event.location}</p>
-                <p>{event.created}</p>
+                <div className="event-general">
+                 <h3>{event.summary}</h3>
+                 <p>{new Date(event.created).toUTCString()}</p>
+                 <p>{event.location}</p>
+                 
+                </div>
                 
                 {showDetails ? (
                     <p 
                         id="event-details" 
                         className="details"
                         >
+                            <h4>About event:</h4>
+                            <p>See details in Google Calendar</p>
                             {event.description}
                     </p>
                 ): null }
