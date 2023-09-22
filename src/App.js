@@ -67,10 +67,10 @@ const App = () => {
         <div className="charts-container">
           <div>
             <EventGenresChart events={events} />
-          </div>
-          <div>
+            </div>
+            <div>
             <CityEventsChart allLocations={allLocations} events={events} />
-          </div>
+            </div>
         </div>
         <EventList events={events} />
       </div>

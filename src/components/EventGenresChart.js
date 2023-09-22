@@ -25,18 +25,19 @@ const EventGenresChart = ({ events }) => {
 
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#ec5353']
   
-  const renderCustomizedLabel = ({ cx, cy, midAngle, outerRadius, percent, index }) => {
+  const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
     const RADIAN = Math.PI / 180;
-    const radius = outerRadius;
-    const x = cx + radius * Math.cos(-midAngle * RADIAN) * 1.07;
-    const y = cy + radius * Math.sin(-midAngle * RADIAN) * 1.07;
+    const radius = innerRadius + (outerRadius-innerRadius) * 0.5;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN) ;
+    const y = cy + radius * Math.sin(-midAngle * RADIAN) ;
     return percent ? (
       <text
         x={x}
         y={y}
-        fill={COLORS[index]}
-        textAnchor={x > cx ? 'start' : 'end'}
+        fill='white'
+        textAnchor={x > cx ? 'middle' : 'middle'}
         dominantBaseline="central"
+        angle={80}
       >
         {`${genres[index]} ${(percent * 100).toFixed(0)}%`}
       </text>
@@ -54,11 +55,9 @@ const EventGenresChart = ({ events }) => {
             labelLine={false}
             label={renderCustomizedLabel}
             outerRadius={150} 
-            
-            
           >
             {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index]} />
+              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
             ))}
           
           </Pie>

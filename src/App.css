@@ -143,8 +143,7 @@ button {
   border-radius: 10px;
 }
 .charts-container div{
-  margin-top: 10px;
-  margin-bottom: 5px;
+  margin: 15px 0 15px 0; 
 }
 
 .logo {
