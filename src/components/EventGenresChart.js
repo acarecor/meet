@@ -52,8 +52,6 @@ const EventGenresChart = ({ events }) => {
         <PieChart >
           <Pie
             data={data}
-            cx="50%"
-            cy="50%"
             dataKey="value"
             fill="#8884d8"
             labelLine={false}
