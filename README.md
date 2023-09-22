@@ -108,3 +108,5 @@ Scenario 1: Show a chart with the number of upcoming events in each city.
 *	Then the user will be able to see a chart with the number of upcoming events per city.
 
 ### Screenshots 
+
+<img src="/public/meet-app-view.png" alt="A Screenshot of Meet main page" width="100%">
