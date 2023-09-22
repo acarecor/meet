@@ -37,7 +37,8 @@ const EventGenresChart = ({ events }) => {
         fill='white'
         textAnchor={x > cx ? 'middle' : 'middle'}
         dominantBaseline="central"
-        angle={80}
+        angle={60}
+        tick={{fontSize: 10}}
       >
         {`${genres[index]} ${(percent * 100).toFixed(0)}%`}
       </text>
@@ -50,8 +51,11 @@ const EventGenresChart = ({ events }) => {
         <PieChart >
           <Pie
             data={data}
+            cx="50%"
+            cy="50%"
             dataKey="value"
             fill="#8884d8"
+
             labelLine={false}
             label={renderCustomizedLabel}
             outerRadius={150} 
