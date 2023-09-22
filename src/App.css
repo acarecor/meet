@@ -145,6 +145,9 @@ button {
 .charts-container div{
   margin: 15px 0 15px 0; 
 }
+.recharts-layer{
+  font-size: 12px;
+}
 
 .logo {
   width: 220px;
