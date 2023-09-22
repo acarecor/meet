@@ -23,22 +23,23 @@ const EventGenresChart = ({ events }) => {
     // eslint-disable-next-line
   }, [`${events}`]);
 
-  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#ec5353']
+  //const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#ec5353'];
+  const COLORS = ['#008385', '#ffd500', '#7fa046', '#007ae5', '#ec5353']
   
   const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
     const RADIAN = Math.PI / 180;
-    const radius = innerRadius + (outerRadius-innerRadius) * 0.5;
+    const radius = innerRadius + (outerRadius-innerRadius) * 0.4;
     const x = cx + radius * Math.cos(-midAngle * RADIAN) ;
     const y = cy + radius * Math.sin(-midAngle * RADIAN) ;
     return percent ? (
       <text
         x={x}
         y={y}
-        fill='white'
+        fill='black'
         textAnchor={x > cx ? 'middle' : 'middle'}
-        dominantBaseline="central"
-        angle={60}
-        tick={{fontSize: 10}}
+        dominantBaseline="top"
+        angle={45}
+        width="10"
       >
         {`${genres[index]} ${(percent * 100).toFixed(0)}%`}
       </text>
@@ -55,7 +56,6 @@ const EventGenresChart = ({ events }) => {
             cy="50%"
             dataKey="value"
             fill="#8884d8"
-
             labelLine={false}
             label={renderCustomizedLabel}
             outerRadius={150} 
