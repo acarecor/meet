@@ -25,7 +25,6 @@ const Event = ({ event }) => {
                         className="details"
                         >
                             <h4>About event:</h4>
-                            <p>See details in Google Calendar</p>
                             {event.description}
                     </p>
                 ): null }
