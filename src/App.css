@@ -177,6 +177,22 @@ button {
 
 }  
 
+@media (max-width: 320px) {
+  .charts-container{
+    margin: 0;
+    grid-template-columns: 1fr;
+  }
+  .charts-container div{
+    margin:  0; 
+  }
+  
+  .App-body{
+    padding: 0;
+  }
+  
+
+}  
+
 
 
 
