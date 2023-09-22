@@ -177,7 +177,7 @@ button {
 
 }  
 
-@media (max-width: 320px) {
+@media all and (min-width: 320px) and (max-width:500px) {
   .charts-container{
     margin: 0;
     grid-template-columns: 1fr;
